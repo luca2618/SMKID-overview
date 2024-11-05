@@ -1,32 +1,32 @@
-import { Brain, Calculator, Code, Database, Laptop, TestTube } from 'lucide-react';
+import { Brain, Signal, Code, Database, Laptop, TestTube,Trophy, Vote} from 'lucide-react';
 
 export const apps = [
   {
-    title: 'AI Laboratorium',
-    description: 'Adgang til maskinlæringsværktøjer og eksperimenter',
-    icon: <Brain className="w-8 h-8" />,
-    link: 'https://colab.research.google.com',
+    title: 'SMKID Point',
+    description: 'Registrer frivellige aktiviter du gør i rådet',
+    icon: <Trophy className="w-8 h-8" />,
+    link: 'https://point.smkid.dk',
     color: 'from-custom-blue/80 to-custom-slate/90'
   },
   {
-    title: 'Matematik Arbejdsrum',
-    description: 'Matematisk modellering og beregningsværktøjer',
-    icon: <Calculator className="w-8 h-8" />,
-    link: 'https://www.wolframalpha.com',
+    title: 'SMKID stemmesystem',
+    description: 'Stemme system til brug under studierådsmøder',
+    icon: <Vote className="w-8 h-8" />,
+    link: 'https://www.vote.smkid.dk',
+    color: 'from-custom-blue/80 to-custom-slate/90'
+  },
+  {
+    title: 'SMKID server status',
+    description: 'Status på SMKID selv-hostede ressourcer og servere',
+    icon: <Signal className="w-8 h-8" />,
+    link: 'https://status.smkid.dk',
     color: 'from-custom-blue/80 to-custom-slate/90'
   },
   {
     title: 'Kodearkiv',
     description: 'Samarbejdsbaseret kodning og versionsstyring',
     icon: <Code className="w-8 h-8" />,
-    link: 'https://github.com',
-    color: 'from-custom-blue/80 to-custom-slate/90'
-  },
-  {
-    title: 'Dataanalyse',
-    description: 'Platform til datavisualisering og analyse',
-    icon: <Database className="w-8 h-8" />,
-    link: 'https://www.kaggle.com',
+    link: 'https://github.com/SMKIDRaadet',
     color: 'from-custom-blue/80 to-custom-slate/90'
   },
   {
