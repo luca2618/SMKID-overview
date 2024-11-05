@@ -19,13 +19,15 @@ export function AppCard({ title, description, icon, link, color }: AppCardProps)
     >
       <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-90 group-hover:opacity-100 transition-opacity backdrop-blur-sm`} />
       <div className="relative p-8">
-        <div className="flex items-center justify-between mb-4">
-          <div className="p-2 bg-white/10 rounded-lg backdrop-blur-sm">
+        <div className="flex items-start space-x-6">
+          <div className="p-2 bg-white/10 rounded-lg backdrop-blur-sm flex-shrink-0">
             {icon}
           </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-2">{title}</h3>
+            <p className="text-gray-200">{description}</p>
+          </div>
         </div>
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-gray-200">{description}</p>
       </div>
     </a>
   );
