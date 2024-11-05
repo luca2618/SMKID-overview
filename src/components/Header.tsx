@@ -8,7 +8,7 @@ export function Header() {
       <div className="absolute inset-0 bg-gradient-to-br from-custom-navy via-custom-slate to-custom-navy opacity-50" />
       <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center sm:flex-row sm:justify-center sm:space-x-8">
-          <img src="SMKID-Logo.png" alt="SMKID Logo" />
+        <Logo />
           <div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
               <span className="block text-custom-blue">SMKID</span>
