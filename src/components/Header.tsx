@@ -12,7 +12,7 @@ export function Header() {
           <div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
               <span className="block text-custom-blue">SMKID</span>
-              <span className="block text-2xl mt-3 text-gray-300">Studieråd for Software, Matematik og Kunstig Intelligens</span>
+              <span className="block text-2xl mt-3 text-gray-300">Studieråd for Software, Mat-Tek og Kunstig Intelligens og Data</span>
             </h1>
             <p className="mt-6 text-xl text-gray-300">
               Her finder du en oversigt over alle SM/KID's apps og ressourcer.
@@ -21,7 +21,7 @@ export function Header() {
               <span className="text-gray-300">Find os her:</span>
               <div className="flex space-x-4">
                 <a
-                  href="https://www.facebook.com/smkid"
+                  href="https://www.facebook.com/SMKIDCouncil"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-custom-blue transition-colors"
@@ -29,21 +29,14 @@ export function Header() {
                   <Facebook className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://www.instagram.com/smkid.dk"
+                  href="https://www.instagram.com/smkidraadetdtu/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-custom-blue transition-colors"
                 >
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a
-                  href="https://www.linkedin.com/company/smkid"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-custom-blue transition-colors"
-                >
-                  <Linkedin className="w-6 h-6" />
-                </a>
+              
                 <a
                   href="https://github.com/SMKIDRaadet"
                   target="_blank"
