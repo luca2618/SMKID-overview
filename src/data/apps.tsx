@@ -1,4 +1,4 @@
-import { Info, Signal, Code, CalendarDays, Server, Instagram,Trophy, Vote} from 'lucide-react';
+import { Info, Signal, Code, CalendarDays, Server, Instagram,Trophy, Vote, TrendingUp} from 'lucide-react';
 
 export const apps = [
   {
@@ -56,5 +56,13 @@ export const apps = [
     icon: <Server className="w-8 h-8" />,
     link: 'https://server.smkid.dk',
     color: 'from-custom-blue/80 to-custom-slate/90'
+  },
+  {
+    title: 'DTU Course Analyzer',
+    description: 'Analyserer og scorer kurser på DTU’s kursusbase baseret på evalueringer.',
+    icon: <TrendingUp className="w-8 h-8" />,
+    link: 'https://chromewebstore.google.com/detail/dtu-course-analyzer/bimhgdngikcnelkhjindmdghndfmdcde',
+    color: 'from-custom-blue/80 to-custom-slate/90'
   }
+
 ];
