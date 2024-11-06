@@ -1,6 +1,27 @@
-import { Brain, Signal, Code, CalendarDays, Laptop, Instagram,Trophy, Vote} from 'lucide-react';
+import { Info, Signal, Code, CalendarDays, Server, Instagram,Trophy, Vote} from 'lucide-react';
 
 export const apps = [
+  {
+    title: 'Hvad er SMKID?',
+    description: 'Læs mere om, hvad SMKID er, og hvordan vi arbejder for at styrke studielivet og fællesskabet.',
+    icon: <Info className="w-8 h-8" />,
+    link: 'https://www.pf.dk/en/councils-and-committees/student-democracy/student-councils/c-smkid-council',
+    color: 'from-custom-blue/80 to-custom-slate/90'
+  },
+  {
+    title: 'Nyheder og begivenheder',
+    description: 'Få de seneste opdateringer om vores nyheder og kommende begivenheder ved at følge os på Facebook.',
+    icon: <CalendarDays className="w-8 h-8" />,
+    link: 'https://www.facebook.com/SMKIDCouncil',
+    color: 'from-custom-blue/80 to-custom-slate/90'
+  },
+  {
+    title: 'Instagram',
+    description: 'Følg med bag kulisserne på vores events og møder – se billeder og historier direkte fra vores Instagram-profil.',
+    icon: <Instagram className="w-8 h-8" />,
+    link: 'https://www.instagram.com/smkidraadetdtu/',
+    color: 'from-custom-blue/80 to-custom-slate/90'
+  },
   {
     title: 'SMKID Point',
     description: 'Registrer dine frivillige aktiviteter i rådet og optjen point for dit engagement.',
@@ -30,17 +51,10 @@ export const apps = [
     color: 'from-custom-blue/80 to-custom-slate/90'
   },
   {
-    title: 'Nyheder og begivenheder',
-    description: 'Få de seneste opdateringer om vores nyheder og kommende begivenheder ved at følge os på Facebook.',
-    icon: <CalendarDays className="w-8 h-8" />,
-    link: 'https://www.facebook.com/SMKIDCouncil',
-    color: 'from-custom-blue/80 to-custom-slate/90'
-  },
-  {
-    title: 'Instagram',
-    description: 'Følg med bag kulisserne på vores events og møder – se billeder og historier direkte fra vores Instagram-profil.',
-    icon: <Instagram className="w-8 h-8" />,
-    link: 'https://www.instagram.com/smkidraadetdtu/',
+    title: 'SMKID servere',
+    description: 'Få indsigt i SMKID’s serverressourcer, og hvordan du kan få din egen personlige server til projekter.',
+    icon: <Server className="w-8 h-8" />,
+    link: 'https://server.smkid.dk',
     color: 'from-custom-blue/80 to-custom-slate/90'
   }
 ];
