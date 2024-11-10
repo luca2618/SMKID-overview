@@ -17,9 +17,6 @@ export function Header() {
               <span className="block text-custom-blue">SMKID</span>
               <span className="block text-2xl mt-3 text-gray-300">Studieråd for Software, Mat-Tek og Kunstig Intelligens og Data</span>
             </h1>
-            <p className="mt-6 text-xl text-gray-300">
-              Her finder du en oversigt over SMKID's apps, ressourcer, nyheder, kommende begivenheder og nyttige værktøjer til dine studier og projekter.
-            </p>
             <div className="mt-6 flex items-center space-x-6">
               <span className="text-gray-300">Find os her:</span>
               <div className="flex space-x-4">
