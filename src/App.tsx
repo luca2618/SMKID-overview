@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { MarkdownTest } from './pages/MarkdownTest';
+import { Info } from './pages/Info';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/test" element={<MarkdownTest />} />
+            <Route path="/info" element={<Info />} />
           </Routes>
         </main>
 

@@ -5,7 +5,7 @@ export const apps = [
     title: 'Hvad er SMKID?',
     description: 'Læs mere om, hvad SMKID er, og hvordan vi arbejder for at styrke studielivet og fællesskabet.',
     icon: <Info className="w-8 h-8" />,
-    link: 'https://www.pf.dk/en/councils-and-committees/student-democracy/student-councils/c-smkid-council',
+    link: '/info',
     color: 'from-custom-blue/80 to-custom-slate/90'
   },
   {
