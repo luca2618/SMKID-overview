@@ -1,8 +1,5 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import MarkdownRenderer from '../MarkdownRenderer';
 
 const markdownContent = `# Markdown Test Page
 
@@ -34,8 +31,8 @@ This page demonstrates all the features of Markdown rendering.
 ## Links and Images
 
 [Visit SMKID's GitHub](https://github.com/SMKIDRaadet)
-
-![Beautiful Nature](https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1080&q=80)
+The image should be in the /public folder
+![The logo](/SMKID-Logo.png)
 
 ## Blockquotes
 
@@ -44,8 +41,6 @@ This page demonstrates all the features of Markdown rendering.
 >> And can be nested
 
 ## Code
-
-Inline code: \`const greeting = "Hello World";\`
 
 Code block:
 \`\`\`javascript
@@ -89,11 +84,6 @@ Here's a sentence with a footnote[^1].
 When $a \\ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are 
 $x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$
 
-## Custom Styling
-
-<div className="bg-custom-slate p-4 rounded-lg mt-4">
-  This is a custom styled div using Tailwind CSS classes
-</div>
 
 ## Syntax Highlighting
 
@@ -111,49 +101,6 @@ def quick_sort(arr):
 
 export function MarkdownTest() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="prose prose-invert prose-lg max-w-none">
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          components={{
-            code({node, inline, className, children, ...props}) {
-              const match = /language-(\w+)/.exec(className || '');
-              return !inline && match ? (
-                <SyntaxHighlighter
-                  style={atomDark}
-                  language={match[1]}
-                  PreTag="div"
-                  {...props}
-                >
-                  {String(children).replace(/\n$/, '')}
-                </SyntaxHighlighter>
-              ) : (
-                <code className={className} {...props}>
-                  {children}
-                </code>
-              );
-            },
-            img({node, ...props}) {
-              return <img className="rounded-lg shadow-lg my-8" {...props} />;
-            },
-            table({node, ...props}) {
-              return (
-                <div className="overflow-x-auto">
-                  <table className="min-w-full divide-y divide-gray-600" {...props} />
-                </div>
-              );
-            },
-            th({node, ...props}) {
-              return <th className="px-6 py-3 bg-custom-slate" {...props} />;
-            },
-            td({node, ...props}) {
-              return <td className="px-6 py-4 whitespace-nowrap" {...props} />;
-            }
-          }}
-        >
-          {markdownContent}
-        </ReactMarkdown>
-      </div>
-    </div>
+    <MarkdownRenderer content={markdownContent} />
   );
 }
