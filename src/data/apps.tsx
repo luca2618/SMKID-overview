@@ -17,7 +17,7 @@ export const apps = [
   },
   {
     title: 'Instagram',
-    description: 'Følg med bag kulisserne på vores events og møder – se billeder og historier direkte fra vores Instagram-profil.',
+    description: 'Følg med bag kulisserne på vores events og møder – se billeder og historier direkte på vores Instagram-profil.',
     icon: <Instagram className="w-8 h-8" />,
     link: 'https://www.instagram.com/smkidraadetdtu/',
     color: 'from-custom-blue/80 to-custom-slate/90'
