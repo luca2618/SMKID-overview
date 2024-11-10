@@ -1,4 +1,4 @@
-import { Info, Signal, Code, CalendarDays, Server, Instagram,Trophy, Vote, TrendingUp} from 'lucide-react';
+import { Info, Signal, Code, CalendarDays, Server, Instagram,Trophy, Vote, TrendingUp, Speaker} from 'lucide-react';
 
 export const apps = [
   {
@@ -63,6 +63,13 @@ export const apps = [
     icon: <TrendingUp className="w-8 h-8" />,
     link: 'https://chromewebstore.google.com/detail/dtu-course-analyzer/bimhgdngikcnelkhjindmdghndfmdcde',
     color: 'from-custom-blue/80 to-custom-slate/90'
-  }
+  },
+  {
+    title: 'SMKID Soundboks Udlejning 🎶',
+    description: 'Skru op for festen! Lån en Soundboks helt gratis til dit næste event. Perfekt til studiefester, arrangementer og hyggeaftener!',
+    icon: <Speaker className="w-8 h-8" />,
+    link: 'https://smkid.dk/soundboks-udlejning', // Husk at opdatere linket, hvis det skal være direkte til SMKID’s side
+    color: 'from-custom-blue/80 to-custom-slate/90'
+}
 
 ];
