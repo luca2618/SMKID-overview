@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
-import { Facebook, Instagram, Linkedin, Github } from 'lucide-react';
+import { Facebook, Instagram, Github } from 'lucide-react';
 
 export function Header() {
   return (
@@ -8,14 +9,16 @@ export function Header() {
       <div className="absolute inset-0 bg-gradient-to-br from-custom-navy via-custom-slate to-custom-navy opacity-50" />
       <div className="relative max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center sm:flex-row sm:justify-center sm:space-x-8">
-        <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
           <div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
               <span className="block text-custom-blue">SMKID</span>
               <span className="block text-2xl mt-3 text-gray-300">Studieråd for Software, Mat-Tek og Kunstig Intelligens og Data</span>
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-            Her finder du en oversigt over SMKID's apps, ressourcer, nyheder, kommende begivenheder og nyttige værktøjer til dine studier og projekter.
+              Her finder du en oversigt over SMKID's apps, ressourcer, nyheder, kommende begivenheder og nyttige værktøjer til dine studier og projekter.
             </p>
             <div className="mt-6 flex items-center space-x-6">
               <span className="text-gray-300">Find os her:</span>
@@ -36,7 +39,6 @@ export function Header() {
                 >
                   <Instagram className="w-6 h-6" />
                 </a>
-              
                 <a
                   href="https://github.com/SMKIDRaadet"
                   target="_blank"
