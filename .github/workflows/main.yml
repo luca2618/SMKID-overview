@@ -37,7 +37,7 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          ssh lucas@192.168.1.4 "cd /var/www/SMKID-overview && git pull origin main && npm install && npm build"
+          ssh lucas@192.168.1.4 "cd /var/www/SMKID-overview && git pull origin main && npm install && npm run build"
 
       - name: Cleanup VPN
         if: always()
