@@ -27,12 +27,19 @@ jobs:
           sed -i 's/^auth-user-pass$/auth-user-pass vpn-auth.txt/' vpn.ovpn
           sudo openvpn --config vpn.ovpn --daemon
           sleep 10  # Wait for connection
+        
+      - name: Set Up SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 192.168.1.4 >> ~/.ssh/known_hosts
 
-      # - name: Deploy to Server
-      #   run: |
-      #     ssh user@your-server-private-ip "cd /path/to/your/project && git pull origin main && npm install && pm2 restart all"
+      - name: Deploy to Server
+        run: |
+          ssh lucas@192.168.1.4 "cd /var/www/SMKID-overview && git pull origin main && npm install && npm build"
 
-      # - name: Cleanup VPN
-      #   if: always()
-      #   run: |
-      #     sudo pkill openvpn
+      - name: Cleanup VPN
+        if: always()
+        run: |
+          sudo pkill openvpn
