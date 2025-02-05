@@ -1,0 +1,37 @@
+name: Deploy via VPN
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install OpenVPN
+        run: |
+          sudo apt update
+          sudo apt install -y openvpn
+
+      - name: Configure VPN
+        run: |
+          echo "${{ secrets.VPN_CONFIG }}" > vpn.ovpn
+          echo -e "${{ secrets.VPN_USERNAME }}\n${{ secrets.VPN_PASSWORD }}" > vpn-auth.txt
+          chmod 600 vpn-auth.txt
+          sed -i 's/^auth-user-pass$/auth-user-pass vpn-auth.txt/' vpn.ovpn
+          sudo openvpn --config vpn.ovpn --daemon
+          sleep 10  # Wait for connection
+
+      # - name: Deploy to Server
+      #   run: |
+      #     ssh user@your-server-private-ip "cd /path/to/your/project && git pull origin main && npm install && pm2 restart all"
+
+      # - name: Cleanup VPN
+      #   if: always()
+      #   run: |
+      #     sudo pkill openvpn
