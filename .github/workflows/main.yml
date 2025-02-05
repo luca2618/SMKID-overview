@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: Production  # 👈 Specify the GitHub Environment
+    environment: Deployment  # 👈 Specify the GitHub Environment
 
     steps:
       - name: Checkout Repository
