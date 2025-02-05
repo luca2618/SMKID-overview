@@ -1,4 +1,4 @@
-import { Info, Signal, Code, CalendarDays, Server, Instagram,Trophy, Vote, TrendingUp, Speaker, Coffee, Warehouse} from 'lucide-react';
+import { Info, Mail, Signal, Code, ArchiveRestore, CalendarDays, Server, Instagram,Trophy, Vote, TrendingUp, Speaker, Coffee, Warehouse} from 'lucide-react';
 
 export const apps = [
   {
@@ -20,6 +20,20 @@ export const apps = [
     description: 'Følg med bag kulisserne på vores events og møder – se billeder og historier direkte på vores Instagram-profil.',
     icon: <Instagram className="w-8 h-8" />,
     link: 'https://www.instagram.com/smkidraadetdtu/',
+    color: 'from-custom-blue/80 to-custom-slate/90'
+  },
+  {
+    title: 'SMKID mail',
+    description: 'Smkid mail service. Tilgå din @smkid.dk mail her.',
+    icon: <Mail className="w-8 h-8" />,
+    link: 'https://mail.smkid.dk/mail',
+    color: 'from-custom-blue/80 to-custom-slate/90'
+  },
+  {
+    title: 'SMKID drev',
+    description: 'Tilgå smkid dokumenter, budgetter, dagsordener og referater her.',
+    icon: <ArchiveRestore className="w-8 h-8" />,
+    link: '/',
     color: 'from-custom-blue/80 to-custom-slate/90'
   },
   {
